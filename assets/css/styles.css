@@ -1,0 +1,218 @@
+/*Estilos Generales*/
+body {
+  background-color: #141414;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #fff;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+* button {
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+.contenedor {
+  max-width: 90%;
+  margin: 0px auto;
+}
+.btn {
+  padding: 10px 20px;
+  font-weight: bold;
+}
+p {
+  line-height: 25px;
+}
+
+/*Estilos Header/Navegacion*/
+#navegacion {
+  padding: 17px 0px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  transition: all 0.4s;
+}
+
+.logo {
+  height: 30px;
+  margin-right: 20px;
+}
+.nav-iconos li img {
+  height: 23px;
+}
+.nav-iconos li:last-child img:first-child {
+  border-radius: 3px;
+  height: 32px;
+}
+.nav-iconos li:last-child img:last-child {
+  margin-bottom: 10px;
+  margin-left: 5px;
+  height: 10px;
+}
+#navegacion a {
+  text-decoration: none;
+  color: #fff;
+}
+#navegacion nav ul li {
+  list-style: none;
+  margin-right: 20px;
+}
+#navegacion nav ul li:last-child {
+  margin-right: 0px;
+}
+#navegacion nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#navegacion nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Estilos Pelicula/Serie principal */
+#destacado {
+  min-width: 100%;
+  height: 90vh;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#destacado::before {
+  content: '';
+  position: absolute;
+  height: 90vh;
+  width: 100%;
+  background: linear-gradient(#000 0.1%, rgba(0, 0, 0, 0), #141414);
+}
+
+/* Informacion principal */
+#contenido-destacado {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 70%;
+  color: #fff;
+}
+
+#contenido-destacado p {
+  margin: 25px 0px;
+}
+
+.titulo-destacado {
+  font-weight: 900;
+  font-size: 60px;
+}
+#contenido-destacado .top {
+  margin-top: 50px;
+  font-size: 20px;
+  font-weight: 900;
+}
+.descripcion {
+  max-width: 50%;
+  font-weight: bold;
+}
+/* Botones */
+#botones-destacado button img {
+  height: 20px;
+  margin-right: 10px;
+  margin-bottom: -4px;
+}
+
+#botones-destacado .reproducir {
+  margin-right: 5px;
+}
+
+#botones-destacado .informacion {
+  color: #fff;
+  background-color: rgba(87, 87, 87, 0.5);
+}
+
+/* Listas de peliculas/series  */
+.contenedor-lista {
+  margin-bottom: 40px;
+}
+.contenedor-titulo {
+  max-width: 95%;
+  margin-left: auto;
+}
+.contenedor-titulo p {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.contenedor-carousel {
+  max-width: 95%;
+  margin-left: auto;
+}
+
+.contenedor-carousel .btn-flecha-izquierda,
+.contenedor-carousel .btn-flecha-derecha {
+  position: absolute;
+  height: 150px;
+  width: 52px;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: all 0.3s;
+  margin: 15px 0px;
+}
+.contenedor-carousel .btn-flecha-izquierda:hover,
+.contenedor-carousel .btn-flecha-derecha:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.contenedor-carousel .btn-flecha-izquierda i,
+.contenedor-carousel .btn-flecha-derecha i {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 40px;
+}
+.contenedor-carousel .btn-flecha-izquierda:hover i,
+.contenedor-carousel .btn-flecha-derecha:hover i {
+  color: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s;
+  transform: scale(1.2);
+}
+.carousel {
+  display: flex;
+  padding: 15px 0px 15px 27px;
+  margin-left: -27px;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+.corousel-elemento button {
+  height: 150px;
+  margin-right: 5px;
+  transition: all 0.3s;
+}
+.corousel-elemento button:hover {
+  transform: scale(1.2);
+}
+.corousel-elemento button img {
+  border-radius: 5px;
+  height: 100%;
+}
+.corousel-elemento:last-child button {
+  margin: 0px;
+}
+.contenedor-carousel {
+  position: relative;
+  display: flex;
+}
+
+.btn-flecha-izquierda {
+  display: none;
+  top: 0;
+  left: 0;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.btn-flecha-derecha {
+  display: none;
+  top: 0;
+  right: 0;
+  border-radius: 5px 0px 0px 5px;
+}
